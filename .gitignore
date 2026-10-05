@@ -1,0 +1,6 @@
+build
+.env
+saphire.db
+saphire.db-wal
+saphire.db-shm
+.DS_Store
