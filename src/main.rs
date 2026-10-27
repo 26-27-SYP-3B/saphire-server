@@ -48,9 +48,9 @@ async fn main() {
 
     let app = Router::new()
         .route("/", get(hello))
-        .route("/auth/register", post(handlers::auth::register))
-        .route("/auth/login", post(handlers::auth::login))
-        .route("/auth/me", get(handlers::auth::me))
+        .route("/api/V1/auth/register", post(handlers::auth::register))
+        .route("/api/V1/auth/login", post(handlers::auth::login))
+        .route("/api/V1/auth/me", get(handlers::auth::me))
         .with_state(db);
 
     let listener = tokio::net::TcpListener::bind(&format!("0.0.0.0:{}", port))
